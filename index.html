@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encoder/Decoder</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'encode')" id="defaultOpen">Encode</button>
+            <button class="tablinks" onclick="openTab(event, 'decode')">Decode</button>
+        </div>
+
+        <div id="encode" class="tabcontent">
+            <input type="text" id="encodeText" placeholder="Enter text to encode" maxlength="256">
+            <input type="number" id="encodeShift" placeholder="Shift" min="0" max="9">
+            <input type="number" id="encodeRepeats" placeholder="Number of repeats" min="1" max="5">
+            <button onclick="encodeText()">Encode</button>
+            <p id="encodeResult"></p>
+            <button onclick="copyToClipboard('encodeResult')">Copy to clipboard</button>
+        </div>
+
+        <div id="decode" class="tabcontent">
+            <input type="text" id="decodeText" placeholder="Enter text to decode" maxlength="256">
+            <input type="number" id="decodeShift" placeholder="Shift" min="0" max="9">
+            <input type="number" id="decodeRepeats" placeholder="Number of repeats" min="1" max="5">
+            <button onclick="decodeText()">Decode</button>
+            <p id="decodeResult"></p>
+            <button onclick="copyToClipboard('decodeResult')">Copy to clipboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
